@@ -1,0 +1,112 @@
+.form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    height: auto;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.champ {
+    margin-bottom: 20px;
+}
+
+/* select  */
+select {
+    width: 50%;
+    height: 25px;
+    font-weight: bolder;
+    margin: 5px 0;
+}
+
+/* Style de base pour tous les champs de saisie */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+    height: 30px;
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style des boutons */
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    background-color: rgb(0, 119, 255);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style pour mettre en surbrillance un champ lorsqu'il est actif */
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    transition: all .3s;
+    background-color: blue;
+    /* Changer la couleur de fond lors du survol */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Ajouter une ombre légère lors du survol */
+}
+
+
+/* Style des étiquettes */
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Style des zones de texte */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.message {
+    color: red;
+    font-weight: bolder;
+}
+
+.zone-de-resultat {
+    display: none;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.label {
+    font-weight: bolder;
+    color: rgb(0, 119, 255);
+}
+
+
+#resultat {
+    padding: 5px;
+    height: auto;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+}
