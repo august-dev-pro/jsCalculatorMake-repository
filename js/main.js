@@ -81,27 +81,7 @@ var premierNombre = document.getElementById("nombre1");
 var deuxiemeNombre = document.getElementById("nombre2");
 
 
-function calcule() {
-
-}
-
-btn.addEventListener("click", () => {
-
-    var operationV = operation.value;
-    var nombre1V = parseFloat(premierNombre.value);
-    var nombre2V = parseFloat(deuxiemeNombre.value);
-
-    if (operationV != "addition" && operationV != "soustraction" && operationV != "multiplication" && operationV != "division") {
-        alert("veuillez choisir une operation de calcul");
-        message[0].innerHTML = "choisissez une operation";
-
-    }
-
-
-    if (isNaN(nombre1V) || isNaN(nombre2V) || nombre1V === "" || nombre2V === "") {
-        alert("Veuillez saisir des nombres valides.");
-        return;
-    }
+function calcule(operationV, nombre1V, nombre2V) {
 
     switch (operationV) {
         case "addition":
@@ -130,8 +110,31 @@ btn.addEventListener("click", () => {
             alert("erreur de calcul");
             break;
     }
+
+}
+
+btn.addEventListener("click", () => {
+
+    var operationV = operation.value;
+    var nombre1V = parseFloat(premierNombre.value);
+    var nombre2V = parseFloat(deuxiemeNombre.value);
+
+    if (operationV != "addition" && operationV != "soustraction" && operationV != "multiplication" && operationV != "division") {
+        alert("veuillez choisir une operation de calcul");
+        return;
+    }
+
+
+    if (isNaN(nombre1V) || isNaN(nombre2V) || nombre1V === "" || nombre2V === "") {
+        alert("Veuillez saisir des nombres valides.");
+        return;
+    }
+
+    calcule(operationV, nombre1V, nombre2V);
+
 }
 );
+
 /* //input email
 var inputEmail = document.createElement("input");
 inputEmail.type = "email";
