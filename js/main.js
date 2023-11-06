@@ -80,6 +80,8 @@ let operation = document.getElementById("operation");
 var premierNombre = document.getElementById("nombre1");
 var deuxiemeNombre = document.getElementById("nombre2");
 
+//formilaire
+let formulaire = document.getElementById("calculatrice-form");
 
 function calcule(operationV, nombre1V, nombre2V) {
 
@@ -87,23 +89,23 @@ function calcule(operationV, nombre1V, nombre2V) {
         case "addition":
             var resultatCalcul = nombre1V + nombre2V;
             resultatZone.classList.add("display-flex");
-            resultat.innerHTML = 'la somme de ' + nombre1V + ' et ' + nombre2V + ' fonds ' + resultatCalcul;
+            resultat.innerHTML = nombre1V + ' + ' + nombre2V + ' = ' + resultatCalcul;
             break;
         case "soustraction":
             var resultatCalcul = nombre1V - nombre2V;
             resultatZone.classList.add("display-flex");
-            resultat.innerHTML = 'la soustraction de ' + nombre1V + ' par ' + nombre2V + ' fonds ' + resultatCalcul;
+            resultat.innerHTML = nombre1V + ' - ' + nombre2V + ' = ' + resultatCalcul;
             break;
         case "multiplication":
             var resultatCalcul = nombre1V * nombre2V;
             resultatZone.classList.add("display-flex");
-            resultat.innerHTML = 'le produit de ' + nombre1V + ' par ' + nombre2V + ' fonds ' + resultatCalcul;
+            resultat.innerHTML = nombre1V + ' x ' + nombre2V + ' = ' + resultatCalcul;
             break;
         case "division":
             var resultatCalcul = nombre1V / nombre2V;
             var reste = nombre1V % nombre2V;
             resultatZone.classList.add("display-flex");
-            resultat.innerHTML = 'la division de ' + nombre1V + ' par ' + nombre2V + ' fonds ' + resultatCalcul + ' reste ' + reste;
+            resultat.innerHTML = nombre1V + ' / ' + nombre2V + ' = ' + resultatCalcul + ' reste: ' + reste;
             break;
 
         default:
@@ -131,6 +133,8 @@ btn.addEventListener("click", () => {
     }
 
     calcule(operationV, nombre1V, nombre2V);
+
+    formulaire.reset();
 
 }
 );
