@@ -120,9 +120,12 @@ textarea {
     }
 
     .zone-de-resultat {
-
         flex-direction: column;
         gap: 5px;
+    }
 
+    button,
+    input[type="button"] {
+        width: 50%;
     }
 }
